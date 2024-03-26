@@ -1,0 +1,14 @@
+name: cs326
+channels:
+  - defaults
+
+dependencies:
+  - python=3.10
+  - requests
+  - numpy
+  - pandas
+  - plotly
+  - jupyter
+  - nbformat
+  - pytest
+  - datasets
