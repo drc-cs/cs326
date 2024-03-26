@@ -13,7 +13,7 @@ revealOptions:
 # Introduction to the Data Science Pipeline
 ## L.01 Overview & Logistics
 
-Instructor: Joshua D'Arcy
+**Instructor**: Joshua D'Arcy
 
 Spring 2024
 
@@ -197,6 +197,24 @@ All information will remain confidential.
 ## Mental Health
 
 If you are feeling distressed or overwhelmed, please reach out for help. Students can access confidential resources through the Counseling and Psychological Services (CAPS), Religious and Spiritual Life (RSL) and the Center for Awareness, Response and Education (CARE).
+
+<!--s-->
+
+## Stuck on Something?
+
+### Office Hours
+
+- Time: 12:20-1:30PM on Tuesdays and Thursdays (after lecture)
+- Location: TBA
+
+### Canvas Discussion
+
+- Every homework & project will have a discussion thread on Canvas.
+- Please post your questions there so that everyone can benefit from the answers!
+
+### Email
+
+- Chongyang and I are here to help you! We ask that you try the office hours and Canvas discussion first, but feel free to reach out to us via email if you are still stuck.
 
 <!--s-->
 
