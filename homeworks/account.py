@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
     if args.create_account:
         print("-*-"*20)
-        print("Please note: your email MUST be your Northwestern email with netid. E.g. YOUR_NET_ID@u.northwestern.edu")
+        print("Please note: your email MUST be your Northwestern email with netid. e.g. YOUR_NET_ID@u.northwestern.edu")
         print("-*-"*20)
         username = input("Enter your email address:")
         password = getpass("Enter your password: ")
@@ -69,7 +69,7 @@ if __name__ == '__main__':
         while not email_verified:
             email_verified = login(username, password)
             time.sleep(1)
-        print("Email verified. You can now login.")
+        print("Email verified. You are now able to submit homework.")
         exit()
 
     if args.forgot_password:

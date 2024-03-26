@@ -35,7 +35,6 @@ Spring 2024
 
 <!--s-->
 
-
 ## What is a Data Science Pipeline?
 
 1. Data Source
