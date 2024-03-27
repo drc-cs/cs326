@@ -81,7 +81,7 @@ Homeworks are designed to reinforce the concepts covered in lecture.
 
 **Late Policy**: Late homeworks will drop 1 point per day (1% of your class grade).
 
-**Platform**: A submission script has been provided to submit your homeworks, please see the hello_world homework [README](https://github.com/drc-cs/cs326/tree/main/homeworks/H01) page for more information.
+**Platform**: A submission script has been provided to submit your homeworks, please see the homework [README](https://github.com/drc-cs/cs326/tree/main/homeworks/) page for more information.
 
 **Collaboration**: You are encouraged to work with your peers on homeworks. However, you must submit your own work. Copying and pasting code from other sources will be detected and penalized.
 
