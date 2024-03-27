@@ -4,11 +4,14 @@ channels:
 
 dependencies:
   - python=3.10
-  - requests
-  - numpy
-  - pandas
-  - plotly
+  - requests=2.31.*
+  - numpy=1.26.*
+  - pandas=2.2.*
   - jupyter
-  - nbformat
-  - pytest
-  - datasets
+  - pip
+  - pip:
+    - nbformat==5.10.*
+    - pytest==8.1.*
+    - datasets==2.18.*
+    - plotly==5.20.*
+  
