@@ -15,8 +15,6 @@ def login(email: str, password: str) -> dict:
     response = requests.post(login_user_url, json=data)
     if response.status_code != 200:
         raise ValueError("Login failed. Please check your password and make sure your account exists.")
-    if response.json().get("emailVerified") == False:
-        raise "Please verify your email address before submitting homework."
     return response.json()
 
 def submit_homework(data: str, token: str, uid: str) -> dict:

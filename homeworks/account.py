@@ -26,15 +26,8 @@ def login(email: str, password: str) -> dict:
     response = requests.post(login_user_url, json=data)
     if response.status_code != 200:
         raise ValueError("Login failed. Please check your password and make sure your account exists.")
-    if response.json().get("emailVerified") == False:
-        raise "Please verify your email address before submitting homework."
     return response.json()
 
-def verify_email(token: str) -> dict:
-    """Verify the email address."""
-    data = { "requestType": "VERIFY_EMAIL", "idToken": token}
-    response = requests.post(verify_and_forgot_password_url, json=data)
-    return response.json()
 
 def forgot_password(email: str) -> dict:
     """Send a password reset email."""
@@ -63,13 +56,7 @@ if __name__ == '__main__':
         if "error" in response.keys():
             print("ERROR: ", response["error"]["message"])
             exit()
-        verify_email(response["idToken"])
-        print("Please check your email to verify your account.")
-        email_verified = False
-        while not email_verified:
-            email_verified = login(username, password)
-            time.sleep(1)
-        print("Email verified. You are now able to submit homework.")
+        print("Account created! You may now login.")
         exit()
 
     if args.forgot_password:
