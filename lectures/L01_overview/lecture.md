@@ -38,11 +38,11 @@ Spring 2024
 ## What is a Data Science Pipeline?
 
 1. Data Source
-2. Data Preprocessing
-3. Data Cleaning
-4. Data Exploration
-5. Data Modeling
-6. Data Interpretation
+2. Data Exploration
+3. Data Preprocessing
+4. Data Modeling
+5. Data Interpretation
+6. Data Action
 
 CS 326 will cover the **fundamentals** of each step of the data science pipeline. We will go for breadth, but you will be encouraged throughout the quarter to go into depth.
 
@@ -58,17 +58,18 @@ Both Canvas and GitHub will be used extensively throughout this course.
 [Canvas](https://canvas.northwestern.edu/courses/211880)
   - Syllabus (with links!)
   - Grades
+  - Discussion threads*
   - Announcements
   - Panopto recordings
+  - Project assignments
 
 </div>
 <div class="c2" style = "width: 50%">
 
 [GitHub Repository](https://github.com/drc-cs/cs326)
   - Syllabus (with links!)
-  - Lecture slides
+  - Lecture slides*
   - Homework assignments
-  - Project deliverables
 
 </div>
 </div>
@@ -98,7 +99,6 @@ Attendance is mandatory. You may miss up two lectures without penalty. After tha
 ## Grading
 
 There is a high emphasis on the practical application of the concepts covered in this course. 
-
 <div class = "col-wrapper">
 <div class="c1" style = "width: 50%">
 
@@ -107,7 +107,6 @@ There is a high emphasis on the practical application of the concepts covered in
 | Homework | 50% |
 | Project | 30% |
 | Quiz | 20% |
-
 
 </div>
 <div class="c2" style = "width: 50%">
@@ -146,7 +145,7 @@ Homeworks are designed to reinforce the concepts covered in lecture. They will b
 
 You will complete a team project over the course of the semester. The project contains deliverables outlined below. Due dates are posted in the syllabus and assigments are linked as they come up.
 
-- **P.01 Project proposal**: ~1 page proposal outlining the project, the data, and your group goals.
+- **P.01 Project Proposal**: ~1 page proposal outlining the project, the data, and your group goals.
 
 - **P.02 Milestone**: 10 minute status update, one per group. Elevator-style pitch deck encouraged. 
 
@@ -201,19 +200,21 @@ If you are feeling distressed or overwhelmed, please reach out for help. Student
 
 ## Stuck on Something?
 
-### Office Hours
+### **Office Hours**
 
 - Time: 12:20-1:30PM on Tuesdays and Thursdays (after lecture)
 - Location: TBA
 
-### Canvas Discussion
+### **Canvas Discussion**
 
 - Every homework & project will have a discussion thread on Canvas.
 - Please post your questions there so that everyone can benefit from the answers!
 
-### Email
+### **Email**
 
 - Chongyang and I are here to help you! We ask that you try the office hours and Canvas discussion first, but feel free to reach out to us via email if you are still stuck.
+  - Chongyang Gao (TA): Chongyanggao2026@u.northwestern.edu<br>
+  - Joshua D'Arcy (Instructor): joshua.darcy1@northwestern.edu
 
 <!--s-->
 
@@ -314,7 +315,7 @@ Open the <span class="code-span">homeworks/</span> folder in VSCode. You should 
 
 - <span class="code-span">hello_world_narrative.ipynb</span>: This is a Jupyter notebook that provides a useful narrative for the homework and methods found in the <span class="code-span">hello_world.py</span> file.
 
-- <span class="code-span">hello_world_test.py</span>: This is the file that will be used to test your code. You can run this file locally and pre-grade your homework prior to submission. :)
+- <span class="code-span">hello_world_test.py</span>: This is the file that will be used to test your code. Future homeworks will not include this file, and this is for demonstration purposes only.
 
 Let's do the first homework together.
 
@@ -330,13 +331,13 @@ Let's do the first homework together.
 
 You will submit your homework using the provided submission script. 
 
-But first, you need a username (your **northwestern** email with netid) and password!
+But first, you need a username (your **netid northwestern** email) and password!
 
 ```bash
 python account.py --create-account
 ```
 
-Once you have a username and password, you can submit your completed homework. You should receive your score or feedback within a few seconds, but this may take longer as the homeworks get more involved. You can submit your homework as many times as you want before the deadline.
+Once you have a username and password, you can submit your completed homework. You should receive your score or feedback within a few seconds, but this may take longer as the homeworks get more involved.
 
 ```bash
 python submit.py --homework H.01/hello_world.py --username your_username --password your_password
@@ -353,9 +354,22 @@ export CS326_PASSWORD="your_password"
 
 ## H.01 | Homework Grading
 
-The highest score will be recorded, so long as it is submitted before the deadline! You have unlimited submissions.
+The highest score will be recorded, so long as it is submitted before the deadline! You have 3 attempts for every homework. 
 
 Late homeworks will be penalized 10% per day.
+
+<!--s-->
+
+## H.01 | Expected Learnings / TLDR;
+
+With this <span class="code-span">hello_world</span> assignment, we worked on the following:
+
+1. Environment installation practice (<span class="code-span">conda</span>)
+2. Exposure to git management (<span class="code-span">GitHub</span>)
+3. Local development IDE practice (<span class="code-span">vscode</span>)
+4. Familiarity with unit testing (<span class="code-span">pytest</span>)
+
+These tools are all critical for any industry position and are often expected for entry level positions. Please continue to familiarize yourself with them over the course of the quarter.
 
 <!--s-->
 

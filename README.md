@@ -141,3 +141,10 @@ All information will remain confidential.
 ## Mental Health
 
 If you are feeling distressed or overwhelmed, please reach out for help. Students can access confidential resources through the Counseling and Psychological Services (CAPS), Religious and Spiritual Life (RSL) and the Center for Awareness, Response and Education (CARE).
+
+-----
+
+## Contact Information
+
+**Joshua D'Arcy (Instructor)**: joshua.darcy1@northwestern.edu<br>
+**Chongyang Gao (TA)**: Chongyanggao2026@u.northwestern.edu
