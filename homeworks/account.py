@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
     if args.create_account:
         print("-*-"*20)
-        print("Please note: your email MUST be your Northwestern email with netid. e.g. YOUR_NET_ID@u.northwestern.edu")
+        print("Please note: your email MUST be your Northwestern email.")
         print("-*-"*20)
         username = input("Enter your email address:")
         password = getpass("Enter your password: ")
