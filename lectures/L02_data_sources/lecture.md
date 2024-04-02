@@ -31,7 +31,7 @@ revealOptions:
 
 **Thursday (04.04.2024)** 
 - Thursday's lecture will be pre-recorded. I will aim to have this up by early Wednesday afternoon.
-- Chongyong will be available for office hours during the lecture time, right here in G15. You are welcome, but not required to attend.
+- Chongyang will be available for office hours during the lecture time, right here in G15. You are welcome, but not required to attend.
 
 <!--s-->
 
