@@ -18,7 +18,7 @@ revealOptions:
 ## Announcements
 
 **H.01**
-- 82% of you have completed H.01 and received a grade on canvas. 🎉!
+- 87% of you have completed H.01 and received a grade on canvas. 🎉!
 - If you still need help with H.01 or do not yet have a grade on Canvas, please reach out to myself or Chongyang. I am holding an office hour today from after lecture until 1PM in G32 for troubleshooting.
 - H.01 will be due on 04.04.2024.
 
@@ -31,7 +31,7 @@ revealOptions:
 
 **Thursday (04.04.2024)** 
 - Thursday's lecture will be pre-recorded. I will aim to have this up by early Wednesday afternoon.
-- Chongyong will be available for office hours during the lecture time, right here in G15.
+- Chongyong will be available for office hours during the lecture time, right here in G15. You are welcome, but not required to attend.
 
 <!--s-->
 
@@ -67,7 +67,7 @@ These tools are all critical for any industry position and are often expected fo
 <div class = "header-slide">
 
 # L.02 Attendance
-Please check-in.
+Please check in.
 
 https://join.iclicker.com/KVYY
 
@@ -87,11 +87,11 @@ https://join.iclicker.com/KVYY
 
 Data is at the heart of all data science. It's the raw material that we use to build models, make predictions, and draw conclusions. Data can be gathered from a variety of sources, and it comes in many different forms. 
 
-Some common data sources include:
+Some common data sources for data scientists include:
 
 - Bulk Downloads
 - APIs
-- Scraping, web crawling
+- Scraping, Web Crawling
 - BYOD (Bring Your Own Data)
 
 <!--s-->
@@ -140,9 +140,23 @@ r = requests.get(url)
 data = r.json()
 ```
 
+```python
+from openai import OpenAI
+client = OpenAI()
+
+response = client.chat.completions.create(
+  model="gpt-3.5-turbo-0125",
+  response_format={ "type": "json_object" },
+  messages=[
+    {"role": "system", "content": "You are a helpful assistant designed to output JSON."},
+    {"role": "user", "content": "Who won the world series in 2020?"}
+  ]
+)
+```
+
 <!--s-->
 
-## Data Sources | Scraping, web crawling
+## Data Sources | Scraping, Web Crawling
 
 Web crawling is a free way to collect data from the internet. But be **cautious**. Many websites have terms of service that prohibit scraping, and you can easily overstep those.
 
@@ -194,7 +208,7 @@ Don't collect data that you don't need. Definitely don't collect data that you d
 
 <!--s-->
 
-## Data Sources | Question
+## Data Sources | iClicker Question
 
 You're building a model to predict the price of a house based on its location, size, and number of bedrooms. Which of the following data sources would be a great first place to look?
 
@@ -205,7 +219,7 @@ You're building a model to predict the price of a house based on its location, s
 
 <!--s-->
 
-## Data Sources | Question
+## Data Sources | iClicker Question
 
 You just built an amazing stock market forecasting model. Congrats! Now, you want to test it on real-time data. Which of the following data sources would be a great first place to look?
 
@@ -228,7 +242,7 @@ You just built an amazing stock market forecasting model. Congrats! Now, you wan
 
 | Type | Example | Advantages | Disadvantages |
 | --- | --- | --- | --- |
-| Structured | Relational Database | easy to query, fast | not flexible, hard to update data |
+| Structured | Relational Database | easy to query, fast | not flexible, hard to update schema |
 | Semi-Structured | XML, CSV, JSON | moderate flexibility, easy to add more data | slow, harder to query |
 | Unstructured | Plain Text, Images, Audio, Video | very flexible, easy to add more data | slow, hardest to query |
 
@@ -238,7 +252,7 @@ You just built an amazing stock market forecasting model. Congrats! Now, you wan
 
 | Type | Example | Advantages | Disadvantages |
 | --- | --- | --- | --- |
-| Structured | Relational Database | easy to query, fast | not flexible, hard to update data |
+| Structured | Relational Database | easy to query, fast | not flexible, hard to update schema |
 | Semi-Structured | XML, CSV, JSON | moderate flexibility, easy to add more data | slow, harder to query |
 | Unstructured | Plain Text, Images, Audio, Video | very flexible, easy to add more data | slow, hardest to query |
 
@@ -255,7 +269,7 @@ CREATE TABLE employees (
 
 | Type | Example | Advantages | Disadvantages |
 | --- | --- | --- | --- |
-| Structured | Relational Database | easy to query, fast | not flexible, hard to update data |
+| Structured | Relational Database | easy to query, fast | not flexible, hard to update schema |
 | Semi-Structured | XML, CSV, JSON | moderate flexibility, easy to add more data | slow, harder to query |
 | Unstructured | Plain Text, Images, Audio, Video | very flexible, easy to add more data | slow, hardest to query |
 
@@ -273,7 +287,7 @@ employeeData = {
 
 | Type | Example | Advantages | Disadvantages |
 | --- | --- | --- | --- |
-| Structured | Relational Database | easy to query, fast | not flexible, hard to update data |
+| Structured | Relational Database | easy to query, fast | not flexible, hard to update schema |
 | Semi-Structured | XML, CSV, JSON | moderate flexibility, easy to add more data | slow, harder to query |
 | Unstructured | Plain Text, Images, Audio, Video | very flexible, easy to add more data | slow, hardest to query |
 
@@ -324,7 +338,7 @@ Remember the age-old adage:
 | Unit Conversions | Numerical data conversions can be tricky. | 1 mile != 1.6 km | Measure in a common unit, or convert with caution. |
 | Precision Representations | Data can be represented differently in different programs. | 64-bit float to 16-bit integer | Use the precision necessary and hold consistent. |
 | Character Representations | Data is in different character encodings. | ASCII, UTF-8, ... | Create using the same encoding, or convert with caution. |
-| Text Unification | Data is in different formats. | D'Arcy -> Darcy -> DArcy -> D Arcy | Use a common format, or convert with caution. <span class="code-span">RegEx</span> will be your best friend.| 
+| Text Unification | Data is in different formats. | D'Arcy; Darcy; DArcy; D Arcy; D&-#-3-9-;Arcy | Use a common format, or convert with caution. <span class="code-span">RegEx</span> will be your best friend.| 
 | Time / Date Unification | Data is in different formats. | 10/11/2019 vs 11/10/2019 | Use standard libraries & UTC. A personal favorite is seconds since epoch. |
 
 </div>
@@ -362,22 +376,22 @@ Remember the age-old adage:
 ## Data Cleaning | Handling Missing Values with Substitution
 
 <div class = "col-wrapper"> 
-<div class = "c1" style = "width: 60%; font-size: 0.85em;">
+<div class = "c1" style = "width: 70%; font-size: 0.85em;">
 
 
 | Method | Description | When to Use |
 | --- | --- | --- |
-| Forward fill | Fill missing value using the last valid value. | Time Series |
-| Backward fill | Fill missing value using the next valid value. | Time Series |
-| Imputation by interpolation | Use linear interpolation to predict missing values. | Time Series |
+| Forward / backward fill | Fill missing value using the last / next valid value. | Time Series |
+| Imputation by interpolation | Use interpolation to estimate missing values. | Time Series |
 | Mean value imputation | Fill missing value with mean from column. | Random missing values |
 | Conditional mean imputation | Estimate mean from other variables in the dataset. | Random missing values |
-| Random value imputation | Sample random values from the column. | Random missing values | 
+| Random imputation | Sample random values from a column. | Random missing values | 
+| KNN imputation | Use K-nearest neighbors to fill missing values. | Random missing values |
 | Multiple Imputation | Uses many regression models and other variables to fill missing values. | Random missing values |
 
 </div>
 
-<div class = "c2" style = "width: 40%">
+<div class = "c2 col-centered" style = "width: 40%">
 
 ```python
 import pandas as pd
@@ -406,7 +420,7 @@ df_interpolate = df.interpolate()
 
 <!--s-->
 
-## Data Cleaning | Question
+## Data Cleaning | iClicker Question
 
 You have streaming data that is occasionally dropping values. Which of the following methods would be appropriate to fill missing values when signal fails to update? 
 
@@ -460,7 +474,7 @@ Canvas Assignment Link: [P.01](https://canvas.northwestern.edu/courses/211880/as
 ## P.01 | Creating a Group
 
 ### **Group Creation**
-You can create a group on Canvas using this [[link]](https://canvas.northwestern.edu/courses/211880/groups).
+Please form groups of 6. You can create a group on Canvas using this [[link]](https://canvas.northwestern.edu/courses/211880/groups).
 
 1. Click on the "People" tab on the left-hand side.
 2. Click on the "Groups" tab.
@@ -476,7 +490,7 @@ I suggest creating a group chat on Slack, Discord, or WhatsApp. This will make i
 
 ## P.01 | Project Proposal
 
-**One person** per group should submit the project proposal using the text editor on Canvas. Please follow the format provided on canvas.
+**One person** per group should submit the project proposal using the text editor on Canvas. Please follow the format provided on canvas. **P.01 is due on 04.09.2024**.
 
 Your proposal should include:
 
