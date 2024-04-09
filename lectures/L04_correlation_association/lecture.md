@@ -391,6 +391,10 @@ The Apriori principle is a fundamental concept in association rule mining. It st
 
 This principle allows us to reduce the number of itemsets we need to consider when generating association rules, and thus reduce the computational complexity. Modern software implementations will use the Apriori principle to generate association rules.
 
+<div class="col-centered">
+<img src="https://www.researchgate.net/profile/Darshan-Tank/publication/276231946/figure/fig2/AS:406644845498372@1473963094797/An-illustration-of-the-Apriori-principle.png" style="border-radius:15px; height: 20%; width: 50%;">
+</div>
+<p style="text-align: center; font-size: 0.6em; color: grey;">Tank, Darshan. (2014)</p>
 <!--s-->
 
 <div class="header-slide">
