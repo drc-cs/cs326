@@ -14,4 +14,5 @@ dependencies:
     - pytest==8.1.*
     - datasets==2.18.*
     - plotly==5.20.*
+    - scipy==1.12.*
   
