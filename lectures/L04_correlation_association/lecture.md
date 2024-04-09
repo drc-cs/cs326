@@ -57,7 +57,7 @@ Our goal is often to understand the relationships between different variables in
 
 ## Correlation
 
-Correlation is a fundamental concept in Data Science. It is used to measure the strength and direction of a relationship between two variables.
+Correlation is a fundamental concept in data science. It is used to measure the strength and direction of a relationship between two variables.
 
 <div style="text-align: center; height: 60%">
   <img src="https://www.scribbr.com/wp-content/uploads/2022/07/Perfect-positive-correlation-Perfect-negative-correlation.webp">
@@ -78,7 +78,7 @@ And it's really just a generalization of the variance to two variables:
 
 <div class="col-centered">
 
-$ \sigma^2 = \frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n} $
+$ \sigma^2 = \frac{\sum_{i=1}^n (X_i - \mu)^2}{n} $
 
 </div>
 
@@ -206,7 +206,7 @@ Which hospital would you rather have surgery in? A or B?
 | Hospital | Died | Survived | Death Rate |
 | --- | --- | --- | --- |
 | A | 16 | 784 | 2% |
-| B | 63 | 20237 | 3% |
+| B | 63 | 2037 | 3% |
 
 <!--s-->
 
@@ -241,7 +241,7 @@ Let's look at all of the data together. Hospital B has a higher death rate than 
 | Hospital | Died | Survived | Death Rate |
 | --- | --- | --- | --- |
 | A | 16 | 784 | 2% |
-| B | 63 | 20237 | **3%** |
+| B | 63 | 2037 | **3%** |
 
 ### Good Condition
 
