@@ -77,7 +77,9 @@ $ \text{cov}(X, Y) = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{n} $
 And it's really just a generalization of the variance to two variables:
 
 <div class="col-centered">
-$ \sigma = \frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n} $
+
+$ \sigma^2 = \frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n} $
+
 </div>
 
 <!--s-->
@@ -407,9 +409,8 @@ Due: 04.16.2024
 There are two new requirements for H.02: <span class="code-span">scipy</span> and <span class="code-span">plotly</span>. You will need to pull the repo and update your conda environment!
 
 ```bash 
-
 cd cs326
 git pull
 conda env update --file environment.yml
-
 ```
+
