@@ -80,11 +80,11 @@ This process enables businesses to make incremental changes that can lead to sig
 
 ## Case Study | Social Network App
 
-A study within a new social network app revealed that users who tagged a friend during their trial period had a **31**% higher conversion rate.
+A study within a new social network app revealed that users who tagged a friend during their trial period had a **31**% increase in daily usage after the trial period ended.
 
-This insight suggests that encouraging social interactions can significantly affect user retention.
+This insight suggests that encouraging social interactions may increase user retention.
 
-An immediate reaction might be to prioritize features solely based on this correlation, such as pushing all new installs to tag a friend. But this would be problematic, because this perspective overlooks the complexity of user behavior and external factors that could influence the observed outcome.
+An immediate reaction might be to prioritize features solely based on this correlation, such as pushing all new installs to tag a friend. But this would be problematic!
 
 <!--s-->
 
@@ -105,10 +105,10 @@ Could all contribute to conversion rate changes. Thus, it's imperative not to ju
 To understand the impact of tagging a friend during a trial period, a structured A/B testing approach is essential:
 
 1. **Construct a Hypothesis:** Begin with a clear, testable hypothesis.
-    - **H0**: Tagging a friend during the trial period has no effect on their conversion rate.
-    - **H1**: Tagging a friend during the trial period increases their conversion rate.
+    - **H0**: Tagging a friend during the trial period has no effect on the original users' retention.
+    - **H1**: Tagging a friend during the trial period increases the original users' retention.
 
-2. **Determine Sample Size:** Establish how many subjects are necessary for a statistically significant test and estimate the duration of the experiment. 
+2. **Design Study / Trial:** Establish how many subjects are necessary for a statistically significant test and estimate the duration of the experiment. 
     - Resources exist to make this process easier [[link]](https://www.evanmiller.org/ab-testing/sample-size.html)
 
 3. **Measure Results:** Use hypothesis testing to assess if there's a significant difference between the two groups.
@@ -118,14 +118,17 @@ To understand the impact of tagging a friend during a trial period, a structured
 
 <!--s-->
 
-## Avoiding Common Pitfalls in A/B Testing
+## Proper A/B Testing Highlights
 
-To ensure the reliability of A/B test results, ensure the following is true:
+1. **Randomization:** Randomly assign subjects to the control and treatment groups to avoid selection bias.
 
-- Sample sizes are sufficient and comparable between groups.
-- Adequate time has been allotted for the experiment.
-- Overlap and conflict between concurrent experiments is avoided.
-- Data collection and instrumentation are consistent and reliable.
+2. **Statistical Significance:** Use statistical tests to determine if the observed differences are significant.
+
+3. **Sample Size:** Ensure that the sample size is large enough to detect meaningful differences.
+
+4. **Duration:** Run the experiment for a sufficient duration to capture the effects of the changes.
+
+5. **Segmentation:** Analyze results across different segments to identify potential variations in the treatment effect.
 
 <!--s-->
 
@@ -141,38 +144,41 @@ To ensure the reliability of A/B test results, ensure the following is true:
 
 Hypothesis testing uses statistical methods to determine whether there is enough evidence to reject a null hypothesis in favor of an alternative hypothesis.
 
-The null hypothesis ($H_0$) is a statement that there is no effect or no difference between groups, while the alternative hypothesis ($H_1$) posits that there is an effect or difference.
+The null hypothesis ($H_0$) is a statement that there is no difference between groups, while the alternative hypothesis ($H_1$) posits that there is a difference.
 
 <!--s-->
 
 ## Common Hypothesis Tests
 
-The following are some of the most common hypothesis tests used in statistics:
+The following are some hypothesis tests used in statistics:
 
 <div style="font-size: 0.8em;">
 
 | Test | Assumptions | Usage (Easy ~ Rule) |
 | --- | --- | --- |
-| t-test | 1. Data are independently and identically distributed. <br> 2. Normal distribution of the groups' means. <br> 3. Equal variances between the two groups (homoscedasticity).* | When comparing the means of two independent groups. |
-| t-test (paired)  | 1. The differences within pairs are independent. <br> 2. The differences are normally distributed.<br> 3. The pairs are selected randomly and are representative.| When comparing the means of two related groups. |
-| chi-square test of independence | 1. Observations are independent. <br> 2. All expected frequencies are at least 5. | When comparing categorical data counts. |
-| One-way ANOVA  | 1. Responses for each group are normally distributed. <br> 2. Variances across groups are approximately equal. <br> 3. Observations are independent. | When comparing the means of three or more groups. |
+| t-test | 1. Data are independently and identically distributed. <br> 2. Both groups follow a normal distribution. | When comparing the means of two independent groups. |
+| t-test (paired)  | 1. Data are independently and identically distributed. <br> 2. The differences are normally distributed.<br> 3. The pairs are selected randomly and are representative.| When you have pre / post test information on subjects or a matched pairs experiment. |
+| chi-square test of independence | 1. Data are independently and identically distributed. <br> 2. All empirical frequencies are 5 or greater. | When comparing proportions across categories. |
+| One-way ANOVA  | 1. Responses for each group are normally distributed. <br> 2. Variances across groups are approximately equal. <br> 3. Data are independently and identically distributed. | When comparing the means of three or more groups. |
 
 </div>
 <!--s-->
 
 ## Common Hypothesis Tests | T-Test Setup
 
-**Scenario:** Comparing the effect of two medications. Medication A has been used on 40 subjects, having an average recovery time of 8 days, with a standard deviation of 2. Medication B (new) has been used on 50 subjects, with an average recovery time of 7 days and a standard deviation of 2.5. 
+**Scenario:** Comparing the effect of two medications. Medication A has been used on 40 subjects, having an average recovery time of 8 days, with a standard deviation of 2 days. Medication B (new) has been used on 50 subjects, with an average recovery time of 7 days and a standard deviation of 2.5 days. 
 
 **Hypotheses:**
-- H0: μ1 = μ2 (No significant difference in mean recovery time)
-- H1: μ1 ≠ μ2 (Significant difference in mean recovery time)
+- H0: μ1 = μ2 (No difference in mean recovery time)
+- H1: μ1 ≠ μ2 (Difference in mean recovery time)
 
 **Assumptions:**
-- Groups are independent of each other.
-- Normal distribution of the groups' means.
-- Equal variances between the two groups (homoscedasticity). *
+- Groups are I.I.D.
+    - I.I.D. stands for independent and identically distributed.
+- Both groups follow a normal distribution.*
+    - Once you have enough samples, the central limit theorem will ensure normality.
+- Equal variances between the two groups (homoscedasticity).*
+    - If variances are not equal, a Welch's t-test can be used.
 
 <!--s-->
 
@@ -180,23 +186,22 @@ The following are some of the most common hypothesis tests used in statistics:
 
 **Calculation:**
 
-To calculate the t-statistic, we use:
+To calculate the t-statistic, we use the following formula (variances not assumed to be equal):
 
-$ t = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} }} $
+$ t = \frac{(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2)}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $
 
 where:
 
-- $ \bar{x}_1, \bar{x}_2 $ are the sample means
-- $ s_1^2, s_2^2 $ are the sample variances
-- $ n_1, n_2 $ are the sample sizes
+- $ \bar{x}_1, \bar{x}_2 $ are the sample means.
+- $ \mu_1, \mu_2 $ are the population means.
+- $ s_1^2, s_2^2 $ are the estimated variances, where s is the standard error for the sample.
+- $ n_1, n_2 $ are the sample sizes.
 
 The t-statistic measures the difference between the two sample means relative to the variability in the data. 
 
-We also need to calculate the degrees of freedom (df) for the t-distribution. Degrees of freedom can be defined as the maximum number of independent values that can vary in a statistical calculation. In this case, df is calculated as:
+We also need to calculate the degrees of freedom (df) for the t-distribution. Degrees of freedom can be defined as the maximum number of independent values that can vary in your calculation. In this case, df is calculated as:
 
-$df = n_1 + n_2 - 2$
-
-Where $n_1$ and $n_2$ are the sample sizes. We subtract 2 because we have two samples.
+$ df = \frac{(\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2})^2}{\frac{(\frac{s_1^2}{n_1})^2}{n_1 - 1} + \frac{(\frac{s_2^2}{n_2})^2}{n_2 - 1}} $
 
 <!--s-->
 
@@ -214,11 +219,11 @@ Where $n_1$ and $n_2$ are the sample sizes. We subtract 2 because we have two sa
 
 ## Common Hypothesis Tests | T-Test (Paired) Setup
 
-**Scenario:** A group of 25 patients is measured for cholesterol levels before and after a particular treatment, aiming to evaluate the treatment's effect.
+**Scenario:** A group of 25 patients is measured for cholesterol levels before and after a particular treatment, aiming to evaluate the treatment's effect on cholesterol.
 
 **Hypotheses:**
-- H0: $d=0$ (No significant difference in mean cholesterol levels)
-- H1: $d \ne 0$ (Significant difference in mean cholesterol levels)
+- H0: $d=0$ (No difference in mean cholesterol levels)
+- H1: $d \ne 0$ (Difference in mean cholesterol levels)
 
 **Assumptions:**
 - The differences within pairs are independent.
@@ -231,13 +236,13 @@ Where $n_1$ and $n_2$ are the sample sizes. We subtract 2 because we have two sa
 
 **Calculation:**
 
-First, find the difference ($d$) for each pair. Then, calculate the mean ($\bar{d}$) and standard deviation ($s_d$) of those differences.
+First, find the difference ($d$) for each pair. Then, calculate the mean ($\bar{d}$) and standard deviation ($s_d$) of those differences. Here, we assume H0 is true, so the mean difference is 0.
 
 $ t = \frac{\bar{d}}{s_d / \sqrt{n}} $
 
 where $n$ is the number of pairs.
 
-The t-statistic measures the difference between the mean differences and the expected mean difference. Degrees of freedom can be calculated with $df = n - 1$.
+The t-statistic measures the difference between the mean differences and the expected mean differences. Degrees of freedom can be calculated with $df = n - 1$.
 
 <!--s-->
 
@@ -246,7 +251,7 @@ The t-statistic measures the difference between the mean differences and the exp
 **Decision Process**
 
 1. Using the t-distribution table with $df = n - 1$, compare the calculated t-value.
-2. Reject H0 if the t-value is outside the range predicted for no effect.
+2. If the computed t-value falls within the critical range, reject the null hypothesis.
 
 <div class="col-centered">
 <img src="https://www.researchgate.net/publication/12025083/figure/fig1/AS:352960891637763@1461163842564/Extract-of-the-t-table-The-first-column-lists-the-degrees-of-freedom-n-1-The.png">
@@ -257,20 +262,17 @@ The t-statistic measures the difference between the mean differences and the exp
 
 ## Common Hypothesis Tests | Chi-Square Test Setup
 
-**Scenario:** Observing if a die is fair, you roll it 60 times, resulting in:
+**Scenario:** You have two penguin species, Adelie and Chinstrap. They are observed in the wild, and the following data is collected from two islands (A and B):
 
-| Side | Count |
-| --- | --- |
-| 1 | 11 |
-| 2 | 9 |
-| 3 | 10 |
-| 4 | 10 |
-| 5 | 10 |
-| 6 | 10 |
+| Species | Island A | Island B |
+|---------|----------|----------|
+| Adelie  | 15       | 5       |
+| Chinstrap | 5     | 15       |
+
 
 **Hypotheses:**
-- H0: The die is fair (expected frequency for each side is 10).
-- H1: The die is not fair.
+- H0: The species distribution is independent of the island.
+- H1: The species distribution is dependent on the island.
 
 **Assumptions:**
 - Observations are independent.
@@ -282,15 +284,23 @@ The t-statistic measures the difference between the mean differences and the exp
 
 **Calculation:**
 
-The chi-square statistic is calculated as:
+The chi-square statistic of independence is calculated as:
 
 $\chi^2 = \sum \frac{(O - E)^2}{E}$
 
-where $O$ is the observed frequency and $E$ is the expected frequency. Degrees of freedom is $ df = (r - 1)(c - 1) $, where $r$ is the number of rows and $c$ is the number of columns.
+where $O$ is the observed frequency and $E$ is the expected frequency. 
+
+Degrees of freedom for the chi-square test of independence: 
+
+$df = (r - 1) \times (c - 1)$
+
+where $r$ is the number of rows and $c$ is the number of columns in the contingency table.
 
 Plugging in the values: 
 
-$\chi^2 = \frac{(11 - 10)^2}{10} + \frac{(9 - 10)^2}{10} + \ldots$
+$ \chi^2 = \frac{(15 - 10)^2}{10} + \frac{(5 - 10)^2}{10} + \frac{(5 - 10)^2}{10} + \frac{(15 - 10)^2}{10} = 10 $
+
+Where the expected frequency is calculated as the row total times the column total divided by the grand total.
 
 <!--s-->
 
@@ -302,8 +312,9 @@ $\chi^2 = \frac{(11 - 10)^2}{10} + \frac{(9 - 10)^2}{10} + \ldots$
 2. If $\chi^2 > \chi_{critical}$, reject H0.
 
 <div class="col-centered">
-<img src="https://www.scribbr.com/wp-content/uploads/2022/05/chi-square-distribution-table-critical-value.png">
+<img src="https://www.mun.ca/biology/scarr/IntroPopGen-Table-D-01-smc.jpg" style = "border-radius: 10px; height: 40%; width: 40%;">
 </div>
+<p style="text-align: center; font-size: 0.6em; color: grey;">© 2022, Steven M. Carr</p>
 
 <!--s-->
 
@@ -313,14 +324,14 @@ $\chi^2 = \frac{(11 - 10)^2}{10} + \frac{(9 - 10)^2}{10} + \ldots$
 
 **Hypotheses:**
 
-- H0: $ \mu_1 = \mu_2 = \mu_3 $ (no significant difference among the group means)
+- H0: $ \mu_1 = \mu_2 = \mu_3 $ (no difference among the group means)
 - H1: At least one group mean is different.
 
 **Assumptions**
-- Responses for each group are normally distributed.
+- Groups are I.I.D.
+- Groups follow a normal distribution.
 - Variances across groups are approximately equal.
     - A good rule of thumb is a ratio of the largest to the smallest variance less than 4.
-- Observations are independent.
 
 <!--s-->
 
@@ -328,19 +339,16 @@ $\chi^2 = \frac{(11 - 10)^2}{10} + \frac{(9 - 10)^2}{10} + \ldots$
 
 **Calculation:**
 
-Sample variance is defined as: 
+The total sum of squares (SS) is calculated as:
 
 $ s^2 = \frac{SS}{df} = \frac{\sum (x - \bar{x})^2}{n - 1} $
 
 where $SS$ is the sum of squares, $df$ is the degrees of freedom, $x$ is the data point, $\bar{x}$ is the sample mean, and $n$ is the sample size.
 
-Anova calculates the F-statistic:
+Anova breaks down the variance explained by the groups ($SS_{between}$) and the variance not explained by the groups ($SS_{within}$). The F-statistic measures the ratio of the variance between groups to the variance within groups. Anova calculates the F-statistic:
 
-$ F = \frac{MS_{between}}{MS_{within}} $
+$ F = \frac{SS_{between} / df_{between}}{SS_{within} / df_{within}} $
 
-where $MS_{between} = \frac{SS_{between}}{df_{between}}$ and $MS_{within} = \frac{SS_{within}}{df_{within}}$.
-
-The F-statistic measures the ratio of the variance between groups to the variance within groups. 
 
 The degrees of freedom are $df_{between} = k - 1$ and $df_{within} = N - k$. Where $k$ is the number of groups and $N$ is the total number of observations.
 
@@ -361,24 +369,33 @@ The degrees of freedom are $df_{between} = k - 1$ and $df_{within} = N - k$. Whe
 
 ## Choosing a Non-Parametric Test
 
-If the assumptions for parametric tests are not met, non-parametric tests can be used. These tests are distribution-free and do not require the data to be normally distributed. These may make less powerful inferences than parametric tests but are more robust to violations of assumptions.
+If the assumptions for parametric tests are not met, non-parametric tests can be used. 
+
+These tests are distribution-free and do not require the data to be normally distributed. These may make less powerful inferences than parametric tests, because parametric tests derive power from the strong assumptions they make about the shape of the data.
 
 <div style="font-size: 0.8em">
 
-| Predictor Variable    | Outcome Variable | Use in place of | Description |
-|-----------------------|------------------|-------------------------|-----------------------------------------------------|
-| Spearman’s r  | Quantitative | Pearson’s r | For quantitative variables with non-linear relation. |
-| Chi square test | Categorical | Pearson’s r | For independence between categorical variables.  |
-| Sign test  | Categorical  | One-sample t-test| For median tests with quantitive outcomes. |
-| Kruskal–Wallis H  | Categorical  | ANOVA | For 3 or more groups of quantitative data |
-| ANOSIM  | Categorical  | MANOVA| For 3 or more groups with 2+ quantitative variables. |
-| Wilcoxon Rank-Sum | Categorical  | Independent t-test  | For 2 groups, different populations. |
-| Wilcoxon Signed-rank  | Categorical  | Paired t-test| For 2 groups from the same population. |
+| Test    | Use in place of | Description |
+|-----------------------|------------------|-------------------------|
+| Spearman’s r  | Pearson’s r | For quantitative variables with non-linear relation. |
+| Kruskal–Wallis H  | ANOVA | For 3 or more groups of quantitative data |
+| Wilcoxon Rank-Sum | Independent t-test  | For 2 groups, different populations. |
+| Wilcoxon Signed-rank  | Paired t-test| For 2 groups from the same population. |
+| Fisher’s Exact Test | Chi-Square | For 2 categorical variables. |
 
-<p style = "text-align: center; color: grey"> © Scribbr, 2024 </p>
+<p style = "text-align: center; color: grey"> © Adapted from Scribbr, 2024 </p>
 
 </div>
 
 <!--s-->
+
+<div class="header-slide">
+
+# Homework Assignment
+## H.02 Data Exploration and Basic Statistics
+
+Due: 04.16.2024
+
+</div>
 
 <!--s-->
