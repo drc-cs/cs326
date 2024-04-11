@@ -116,9 +116,10 @@ B. No<br>
 
 Factors such as:
 
-1. The ability to link other accounts
-2. Support for multi-factor authentication
-3. Improvements in the app's user interface
+- **Seasonality:** Changes in user behavior due to holidays or seasonal trends.
+- **Marketing Campaigns:** The impact of marketing campaigns on user engagement.
+- **Product Updates:** Changes in the app's features or design.
+- **User Demographics:** Variations in user behavior based on age, location, or other factors.
 
 Could all contribute to conversion rate changes. Thus, it's imperative not to jump to conclusions about causality based solely on passively observed correlations.
 
@@ -238,7 +239,7 @@ D. T-Test (Paired)<br>
 
 ## Question 2 | Hypothesis Testing
 
-**Question:** Propose I wanted to do an analysis on the efficacy of Slide 17. Let's say I collected your level of confidence of Question 1 before and after seeing Slide 17 (0 to 10). 
+**Question:** Propose I wanted to do an analysis on the efficacy of Slide 17. Let's say I collected your level of confidence of Question 1 before and after seeing Slide 17 (1 to 10). 
 
 **What test would you use to compare the before / after confidence of students, assuming all conditions are met?**
 
@@ -326,7 +327,7 @@ $ df = \frac{(\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2})^2}{\frac{(\frac{s_1^2}{n_1}
 
 **Calculation:**
 
-First, find the difference ($d$) for each pair. Then, calculate the mean ($\bar{d}$) and standard deviation ($s_d$) of those differences. Here, we assume H0 is true, so the mean difference is 0.
+First, find the difference ($d$) for each pair. Then, calculate the mean ($\bar{d}$) and standard deviation ($s_d$) of those differences.
 
 $ t = \frac{\bar{d}}{s_d / \sqrt{n}} $
 
