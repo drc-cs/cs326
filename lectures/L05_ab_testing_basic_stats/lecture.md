@@ -18,7 +18,7 @@ revealOptions:
 ## Announcements
 
 - H.02 is due on **04.16.2024**
-    - 3 of you have already submitted H.02! 🎉!
+    - 5 of you have already submitted H.02! 🎉!
     - We'll work on finishing up the last few parts of the assignment today.
 - Office Hours today from 12:20P - 1P in Annenberg G31
 
@@ -78,13 +78,37 @@ This process enables businesses to make incremental changes that can lead to sig
 
 <!--s-->
 
+
+
 ## Case Study | Social Network App
 
 A study within a new social network app revealed that users who tagged a friend during their trial period had a **31**% increase in daily usage after the trial period ended.
 
-This insight suggests that encouraging social interactions may increase user retention.
+<div class = "col-wrapper">
+<div class="c1" style = "width: 50%">
 
-An immediate reaction might be to prioritize features solely based on this correlation, such as pushing all new installs to tag a friend. But this would be problematic!
+This insight suggests that encouraging social interactions may **increase user retention**.
+
+An immediate reaction might be to prioritize features solely based on this correlation, such as pushing all new installs to tag a friend.
+
+</div>
+<div class="c2" style = "width: 50%">
+
+<iframe width = "100%" height = "60%" src="https://lottie.host/embed/6a06ca79-cb9c-48e2-bdac-a8bbbcb03815/j0VNBrf81N.json"></iframe>
+
+</div>
+</div>
+
+<!--s-->
+
+## Question 0 | A/B Testing Considerations
+
+**Question:** After observing the correlation between tagging a friend and increased user retention, should the app developers immediately implement this feature for all new users?
+
+<p style="margin-left: 25px;">
+A. Yes<br>
+B. No<br>
+</p>
 
 <!--s-->
 
@@ -148,6 +172,29 @@ The null hypothesis ($H_0$) is a statement that there is no difference between g
 
 <!--s-->
 
+## Question 1.1.0 | Hypothesis Testing
+
+**Question:** You have data on the average time it takes for two groups of students to complete a test. Group A has an average time of 45 minutes +/- 5 minutes, while Group B has an average time of 50 minutes +/- 5 minutes. You want to determine if there is a significant difference between the two groups. 
+
+**What test would you use to compare the two groups, assuming all conditions are met?**
+
+<p style="margin-left: 25px;">
+A. Chi-Square Test of Independence<br>
+B. One-Way ANOVA<br>
+C. T-Test (Independent)<br>
+D. T-Test (Paired)<br>
+</p>
+
+<!--s-->
+
+## Question 1.1.1 | Hypothesis Testing
+
+**Question:** You have data on the average time it takes for two groups of students to complete a test. Group A has an average time of 45 minutes +/- 5 minutes, while Group B has an average time of 50 minutes +/- 5 minutes. You want to determine if there is a significant difference between the two groups. 
+
+**How would you rate your confidence on the answer to Question 1, on a scale of 1-10?**
+
+<!--s-->
+
 ## Common Hypothesis Tests
 
 The following are some hypothesis tests used in statistics:
@@ -162,6 +209,46 @@ The following are some hypothesis tests used in statistics:
 | One-way ANOVA  | 1. Responses for each group are normally distributed. <br> 2. Variances across groups are approximately equal. <br> 3. Data are independently and identically distributed. | When comparing the means of three or more groups. |
 
 </div>
+
+<!--s-->
+
+## Question 1.2.0 | Hypothesis Testing
+
+**Question:** You have data on the average time it takes for two groups of students to complete a test. Group A has an average time of 45 minutes +/- 5 minutes, while Group B has an average time of 50 minutes +/- 5 minutes. You want to determine if there is a significant difference between the two groups. 
+
+**What test would you use to compare the two groups, assuming all conditions are met?**
+
+<p style="margin-left: 25px;">
+A. Chi-Square Test of Independence<br>
+B. One-Way ANOVA<br>
+C. T-Test (Independent)<br>
+D. T-Test (Paired)<br>
+</p>
+
+<!--s-->
+
+## Question 1.2.1 | Hypothesis Testing
+
+**Question:** You have data on the average time it takes for two groups of students to complete a test. Group A has an average time of 45 minutes +/- 5 minutes, while Group B has an average time of 50 minutes +/- 5 minutes. You want to determine if there is a significant difference between the two groups. 
+
+**How would you rate your confidence on the answer to Question 1, on a scale of 1-10?**
+
+<!--s-->
+
+
+## Question 2 | Hypothesis Testing
+
+**Question:** Propose I wanted to do an analysis on the efficacy of Slide 17. Let's say I collected your level of confidence of Question 1 before and after seeing Slide 17 (0 to 10). 
+
+**What test would you use to compare the before / after confidence of students, assuming all conditions are met?**
+
+<p style="margin-left: 25px;">
+A. Chi-Square Test of Independence<br>
+B. One-Way ANOVA<br>
+C. T-Test (Independent)<br>
+D. T-Test (Paired)<br>
+</p>
+
 <!--s-->
 
 ## Common Hypothesis Tests | T-Test Setup
@@ -280,6 +367,24 @@ The t-statistic measures the difference between the mean differences and the exp
 
 <!--s-->
 
+## Question 3 | Ch-Square Expectation Calculation
+
+**Question:** Calculate the expected frequency for Adelie penguins on Island A. Assuming the null hypothesis is true, what is the expected frequency?
+
+| Species | Island A | Island B |
+|---------|----------|----------|
+| Adelie  | 15       | 5       |
+| Chinstrap | 5     | 15       |
+
+<p style="margin-left: 25px;">
+A. 10<br>
+B. 5<br>
+C. 7.5<br>
+D. 12.5<br>
+</p>
+
+<!--s-->
+
 ## Common Hypothesis Tests | Chi-Square Test Calculation
 
 **Calculation:**
@@ -300,7 +405,7 @@ Plugging in the values:
 
 $ \chi^2 = \frac{(15 - 10)^2}{10} + \frac{(5 - 10)^2}{10} + \frac{(5 - 10)^2}{10} + \frac{(15 - 10)^2}{10} = 10 $
 
-Where the expected frequency is calculated as the row total times the column total divided by the grand total.
+*Where the expected frequency is calculated as the row total times the column total divided by the grand total.*
 
 <!--s-->
 

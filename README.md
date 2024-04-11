@@ -16,7 +16,7 @@ This schedule is tentative and may change as the course progresses. Click on lin
 | 2 | 04.02.2024 | [Data Collection and Structure](https://drc-cs.github.io/cs326/lectures/L02_data_sources/#/) | | |
 | 3 | 04.04.2024 | [Exploratory Data Analysis](https://drc-cs.github.io/cs326/lectures/L03_exploratory_data/#/) | [H.01](https://github.com/drc-cs/cs326/tree/main/homeworks/H01) | |
 | 4 | 04.09.2024 | [Correlation, Association, and Simpson's Paradox](https://drc-cs.github.io/cs326/lectures/L04_correlation_association/#/) | | [P.01](https://canvas.northwestern.edu/courses/211880/assignments/1404904) |
-| 5 | 04.11.2024 | A/B Testing and Statistical Inference | | |
+| 5 | 04.11.2024 | [A/B Testing and Statistical Inference](https://drc-cs.github.io/cs326/lectures/L05_ab_testing_basic_stats/#/) | | |
 | 6 | 04.16.2024 | Data Preprocessing | [H.02](https://canvas.northwestern.edu/courses/211880/assignments/1406471) | |
 | 7 | 04.18.2024 | Supervised Machine Learning I <br> *KNN / Logistic Regression* | | |
 | 8 | 04.23.2024 | Supervised Machine Learning II <br> *Decision Trees / Ensembles* | | |
