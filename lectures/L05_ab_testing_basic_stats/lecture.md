@@ -271,6 +271,8 @@ D. T-Test (Paired)<br>
 
 ## Common Hypothesis Tests | T-Test Calculation
 
+<div style="font-size: 0.85em">
+
 **Calculation:**
 
 To calculate the t-statistic, we use the following formula (variances not assumed to be equal):
@@ -290,6 +292,7 @@ We also need to calculate the degrees of freedom (df) for the t-distribution. De
 
 $ df = \frac{(\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2})^2}{\frac{(\frac{s_1^2}{n_1})^2}{n_1 - 1} + \frac{(\frac{s_2^2}{n_2})^2}{n_2 - 1}} $
 
+</div>
 <!--s-->
 
 ## Common Hypothesis Tests | T-Test Decision
