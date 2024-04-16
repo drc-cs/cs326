@@ -20,8 +20,8 @@ This schedule is tentative and may change as the course progresses. Click on lin
 | 6 | 04.16.2024 | Data Preprocessing | [H.02](https://canvas.northwestern.edu/courses/211880/assignments/1406471) | |
 | 7 | 04.18.2024 | Supervised Machine Learning I <br> *KNN / Logistic Regression* | | |
 | 8 | 04.23.2024 | Supervised Machine Learning II <br> *Decision Trees / Ensembles* | | |
-| 9 | 04.25.2024 | Supervised Machine Learning III <br> *Time Series Modeling* | H.03 | |
-| 10 | 04.30.2024 | Unsupervised Machine Learning <br> | | |
+| 9 | 04.25.2024 | Supervised Machine Learning III <br> *Time Series Modeling* | | |
+| 10 | 04.30.2024 | Unsupervised Machine Learning <br> | H.03 | |
 | 11 | 05.02.2024 | Recommendation Modeling | | |
 | 12 | 05.07.2024 | Project 1-on-1 | | P.02 |
 | 13 | 05.09.2024 | Text Data I <br> *Handling Text Data* | H.04 | |
