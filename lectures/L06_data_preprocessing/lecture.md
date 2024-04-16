@@ -38,6 +38,8 @@ https://join.iclicker.com/KVYY
 
 <!--s-->
 
+## T Distribution
+
 On Tuesday, there was a question about what the t-distribution actually looks like. Here's how you can visualize it in Python (and better understand T-tables!):
 
 <div class = "col-wrapper">
@@ -70,13 +72,16 @@ Where $\nu$ is the degrees of freedom.
 
 <!--s-->
 
-Also on Tuesday, there was also a question about why <span class="code-span">df = n - 1</span> in the t-distribution. 
+## Why df = n - 1?
 
-We subtract 1 from the sample size to account for the fact that we are estimating the population mean from the sample mean. But why do we do this?
+Also on Tuesday, there was also a question about why <span class="code-span">df = n - 1</span> in ANOVA. 
+
+We subtract 1 from the sample size to account for the fact that we are estimating the population mean from the sample mean. But *why* do we do this?
 
 To illustrate:
 
-- You have a sample of 5 data points: <span class="code-span"> [1, 2, 3, 4, 5] </span>
+- Recall that the definition of degrees of freedom is the number of independent observations in a sample.
+- Suppose you have a sample of 5 data points: <span class="code-span"> [1, 2, 3, 4, 5] </span>
 - You calculate the sample mean: <span class="code-span"> 3 </span>
 - You can calculate the last data point from the sample mean and 4 of the other data points. So you lose a degree of freedom, because you can't change the last data point without changing the sample mean.
 
@@ -320,8 +325,8 @@ scaler.transform(data)
 
 | Method | Pros | Cons | When to Use | 
 |--------|------|------| ------------|
-| MinMax | Preserves relationships, bounded between 0 and 1. | Sensitive to outliers | When the data is uniformly distributed. |
-| Standard | Robust to outliers. | May not preserve relationships, not bounded. | When the data is normally distributed. |
+| MinMax | Preserves relationships. Bounded between 0 and 1. | Sensitive to outliers | When the data is uniformly distributed. |
+| Standard | More robust to outliers. | May not preserve relationships. Not bounded. | When the data is normally distributed. |
 
 **A special note on training / testing sets** -- always fit the scaler on the training set and transform both the training and testing sets using those parameters. This ensures that the testing set is not used to influence the training set.
 
