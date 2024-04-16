@@ -22,7 +22,7 @@ revealOptions:
     - You shoud receive feedback on your free responses by next week.
     - 78% of students have submitted (🎉)
 
-- We'll walk through P.01 proposals today after the primary lecture.
+- We'll walk through P.01 proposals today after the main lecture.
 - H.03 will be released on Tuesday, April 23rd and will be due on Tuesday, April 30th.
 
 <!--s-->
@@ -76,7 +76,7 @@ Where $\nu$ is the degrees of freedom.
 
 Also on Tuesday, there was also a question about why <span class="code-span">df = n - 1</span> in ANOVA. 
 
-We subtract 1 from the sample size to account for the fact that we are estimating the population mean from the sample mean. But *why* do we do this?
+Short answer -- we subtract 1 from the sample size to account for the fact that we are estimating the population mean from the sample mean. But *why* do we do this?
 
 To illustrate:
 
@@ -95,6 +95,18 @@ To illustrate:
 
 <!--s-->
 
+## Question | Lecture Testing
+
+How would you rate your skillset in taking a raw dataset and transforming it into a machine learning-ready dataset?
+
+**1**: No knowledge -- Please help. <br>
+**5**: Some knowledge -- I feel like I have enough tools to get started transforming data. <br>
+**10**: Expert knowledge -- I'm ready to go! Give me all of the ML models! <br>
+
+Please answer between **1 and 10**. 
+
+<!--s-->
+
 ## Common Data Format
 
 Often, your goal is to build a complete, numerical matrix with rows (instances) and columns (features).
@@ -103,6 +115,12 @@ Often, your goal is to build a complete, numerical matrix with rows (instances) 
 - **Reality**: Raw Dataset → ML-Ready Dataset → Features (?) → Model → Task
 
 Once you have a numerical matrix, you can apply modeling methods to it.
+
+| Student ID | Homework | Exam 1 | Exam 2 | Final |
+|------------|----------|--------|--------|-------|
+| [1,0,...] | 0.90  | 0.89 | 0.70 | 0.93 |
+| [0,1,...] | 0.79 | 0.75| 0.70 | 0.65 |
+| ... | ... | ... | ... | ... |
 
 <!--s-->
 
@@ -376,13 +394,24 @@ array([[-1,  0],
        [ 1,  0]])
 ```
 
+<!--s-->
 
+## Question | One-Hot Encoding vs. Feature Hashing
+
+Given the scenario below, what method is most appropriate for this situation?
+
+**Scenario**: You are working with a dataset that contains a feature with 100 unique categories. You are unsure if all categories are present in the training set, and you want to reduce the dimensionality of the feature space.
+
+<p style="margin-left: 20px;">
+A. One-Hot Encoding <br>
+B. Feature Hashing <br>
+</p>
 
 <!--s-->
 
 ## Temporal Data | Temporal Granularity
 
-Converting temporal features to bins based on the required granularity for your model helps manage your time series data. For example, you can convert a date feature to a month feature OR a day feature, depending on the required resolution of your model.
+Converting temporal features to bins based on the required granularity for your model helps manage your time series data. For example, you can convert a date feature to year / month / day, depending on the required resolution of your model.
 
 We'll cover more of time series data handling in our time series analysis lecture -- but pandas has some great tools for this!
 
@@ -392,6 +421,7 @@ import pandas as pd
 data = pd.DataFrame({"date": ["2021-01-01", "2021-02-01", "2021-03-01"]})
 data["date"] = pd.to_datetime(data["date"])
 data["month"] = data["date"].dt.month
+data["day"] = data["date"].dt.day
 
 ```
 
@@ -549,6 +579,18 @@ pca.transform(data)
 
 <!--s-->
 
+## Question | Lecture Testing
+
+How would you rate your skillset in taking a raw dataset and transforming it into a machine learning-ready dataset?
+
+**1**: No knowledge -- Please help. <br>
+**5**: Some knowledge -- I feel like I have enough tools to get started transforming data. <br>
+**10**: Expert knowledge -- I'm ready to go! Give me all of the ML models! <br>
+
+Please answer between **1 and 10**. 
+
+<!--s-->
+
 <div class="header-slide">
 
 # P.01 & P.02 | Clarifications
@@ -569,7 +611,7 @@ P.02 will be more structured and follow a rubric.
 
 An elevator pitch is a brief, persuasive speech that you can use to spark interest in what your project is about. You can also use it to create interest in a project, idea, or product – or in yourself. A good elevator pitch should last no longer than a short elevator ride of 20 to 30 seconds, hence the name.
 
-For P.02, you are expected to do an elevator pitch style presentation. This means you should be able to explain your project in a concise and engaging manner. We'll relax the contraints a bit, but you should aim for a total 5 minute presentation that at minimum covers the following aspects of your project:
+For P.02, you are expected to do an elevator pitch style presentation. This means you should be able to explain your project in a concise and engaging manner. We'll relax the contraints a bit, but you should aim for a total 5 minute presentation that at minimum covers your plans for the following aspects of your project:
 
 1. Data Source
 2. Data Exploration
