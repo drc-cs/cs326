@@ -77,7 +77,7 @@ Lectures will be broken down into theory and applications.
 
 Homeworks are designed to reinforce the concepts covered in lecture.
 
-**Due**: Homework due dates are posted in the README.
+**Due**: Homework due dates are posted in the README. You will have 3 attempts to submit your homework.
 
 **Late Policy**: Late homeworks will drop 1 point per day (1% of your class grade).
 
