@@ -22,9 +22,22 @@ revealOptions:
 
   - I would like to chat with the remaining groups today. If I haven't spoken with your team yet and you would like to discuss your project prior to P.02, please let me know after lecture today.
 
-- H.02. There was some confusion around the submission count for H.02. You get 3 submissions per homework assignment. If you locked in a low score by mistake (because you thought you had unlimited attempts), please come to office hours today to earn those points back. This is a one-time offer for H.02 only. 
+- H.02. There was some confusion around the submission count for H.02. You get 3 submissions per homework assignment. 
+  - If you locked in a low score by mistake (because you thought you had unlimited attempts), please come to office hours today to earn those points back. This is a one-time offer for H.02 only. 
 
-- H.03. Homework 3 will be released on Tuesday (04.23).
+- H.03. Homework 3 will be released on Tuesday (04.23). 
+  - Fair warning: I'll be updating the server to only show you **which** tests fail, but not **how** they fail. 
+
+<!--s-->
+
+<div class = "header-slide">
+
+# L.04 Attendance
+Please check in.
+
+https://join.iclicker.com/KVYY
+
+</div>
 
 <!--s-->
 
@@ -44,6 +57,7 @@ Before diving into today's content, let's revisit the data science pipeline we'v
 3. **Data Preprocessing (L.06)**
     - L.06 covered cleaning / transformation.
 4. **Data Modeling**
+    - L.07 (today) will cover modeling methods.
 5. **Data Interpretation**
 6. **Data Action**
 
@@ -53,6 +67,17 @@ Before diving into today's content, let's revisit the data science pipeline we'v
 <img src="https://img.freepik.com/free-vector/location_53876-25530.jpg?size=338&ext=jpg&ga=GA1.1.523418798.1711497600&semt=ais" width="100%">
 </div>
 </div>
+
+<!--s-->
+
+## Question | Supervised Machine Learning (Pre-L.07)
+
+On a scale of 1-10, how comfortable are you with the concept of supervised machine learning using the following methods:
+
+1. k-Nearest Neighbors (KNN)
+2. Linear Regression
+3. Logistic Regression with Gradient Descent
+
 
 <!--s-->
 
@@ -506,6 +531,17 @@ array([[0.3361201, 0.6638799]])
 - We discussed the importance of splitting data into training, validation, and test sets.
 - We delved into k-Nearest Neighbors, Linear Regression, and Logistic Regression with Gradient Descent, exploring practical implementations and theoretical foundations.
 - Understanding these foundational concepts is crucial for advanced machine learning and model fine-tuning! 
+
+<!--s-->
+
+## Question | Supervised Machine Learning (Post-L.07)
+
+On a scale of 1-10, how comfortable are you with the concept of supervised machine learning using the following methods:
+
+1. k-Nearest Neighbors (KNN)
+2. Linear Regression
+3. Logistic Regression with Gradient Descent
+
 
 <!--s-->
 
