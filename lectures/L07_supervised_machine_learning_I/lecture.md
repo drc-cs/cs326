@@ -559,7 +559,7 @@ Lots of great ideas for projects! Now, we're going to adjust them to fit into th
       Where are you getting your data from?
 2. **Data Exploration**: 
 
-      How are you summarizing and visualizing your data? If you do some light hypothesis testing or correlation analysis, that is excellent.
+      How are you summarizing and visualizing your data? If you do some hypothesis testing or correlation analysis, that is excellent.
 3. **Data Preprocessing**: 
 
       How are you cleaning and transforming your data?
