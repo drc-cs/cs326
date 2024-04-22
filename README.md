@@ -19,13 +19,13 @@ This schedule is tentative and may change as the course progresses. Click on lin
 | 5 | 04.11.2024 | [A/B Testing and Statistical Inference](https://drc-cs.github.io/cs326/lectures/L05_ab_testing_basic_stats/#/) | | |
 | 6 | 04.16.2024 | [Data Preprocessing](https://drc-cs.github.io/cs326/lectures/L06_data_preprocessing/#/) | [H.02](https://canvas.northwestern.edu/courses/211880/assignments/1406471) | |
 | 7 | 04.18.2024 | [Supervised Machine Learning I <br> *KNN / Logistic Regression*](https://drc-cs.github.io/cs326/lectures/L07_supervised_machine_learning_I/#/) | | |
-| 8 | 04.23.2024 | Supervised Machine Learning II <br> *Decision Trees / Ensembles* | | |
-| 9 | 04.25.2024 | Supervised Machine Learning III <br> *Time Series Modeling* | | |
-| 10 | 04.30.2024 | Unsupervised Machine Learning <br> | H.03 | |
-| 11 | 05.02.2024 | Recommendation Modeling | | |
+| 8 | 04.23.2024 | Supervised Machine Learning II <br>  *ROC-AUC / K-Fold / Multi-Class*| | |
+| 9 | 04.25.2024 | Supervised Machine Learning III <br> *Decision Trees / Ensembles* | | |
+| 10 | 04.30.2024 | Recommendation Modeling | H.03 | |
+| 11 | 05.02.2024 | Unsupervised Machine Learning | | |
 | 12 | 05.07.2024 | Project 1-on-1 | | P.02 |
-| 13 | 05.09.2024 | Text Data I <br> *Handling Text Data* | H.04 | |
-| 14 | 05.14.2024 | Text Data II <br> *Natural Language Processing*| | |
+| 13 | 05.09.2024 | Time Series Analysis | H.04 | |
+| 14 | 05.14.2024 | Natural Language Processing | | |
 | 15 | 05.16.2024 | Storytelling and Ethics | | |
 | 16 | 05.21.2024 | Quiz Review | H.05 | |
 | 17 | 05.23.2024 | Quiz | | |
