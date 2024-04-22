@@ -102,7 +102,7 @@ def knn(x: np.array, y: np.array,
         np.array: The predicted labels for the testing data.
     """
 
-    # Distances between the test sample and all the training samples.
+    # (distance, label) between the test sample and all the training samples.
     distances = []
 
     for x_i, y_i in zip(x, y):
@@ -142,7 +142,7 @@ def linear_regression(X: np.array, y: np.array) -> np.array:
     raise NotImplementedError("Please implement the linear_regression function.")
 
 def linear_regression_predict(X: np.array, weights: np.array) -> np.array:
-    """Predict the dependent variables using the weights.
+    """Predict the dependent variables using the weights and independent variables.
 
     Args:
         X (np.array): The independent variables.
