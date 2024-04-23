@@ -189,6 +189,9 @@ def logistic_regression_gradient_descent(X: np.array, y: np.array,
     Other algorithms will work, but the tests are expecting the weights to be
     calculated in the way described in our lecture.
 
+    NOTE: The tests expect a learning rate of 0.01 and 5000 iterations. Do
+    not change these values prior to submission.
+
     Args:
         X (np.array): The independent variables.
         y (np.array): The dependent variables.
@@ -201,23 +204,22 @@ def logistic_regression_gradient_descent(X: np.array, y: np.array,
     # Add the bias term using np.hstack.
     X = np.hstack([np.ones((X.shape[0], 1)), X])
 
-    # Initialize the weights with zeros.
-    weights = np.zeros(X.shape[1])
+    # 1. Initialize the weights with zeros. np.zeros is your friend here!
+    weights = "replace_this_with_np.zeros()"
 
     # For each iteration, update the weights.
     for _ in range(num_iterations):
 
-        # 1. Calculate the predictions.
+        # 2. Calculate the predictions.
         
 
-        # 2. Calculate the gradient.
+        # 3. Calculate the gradient.
     
 
-        # 3. Update the weights -- make sure to use the learning rate!
+        # 4. Update the weights -- make sure to use the learning rate!
 
         raise NotImplementedError("Please implement the logistic_regression_gradient_descent function.")
-
-    raise NotImplementedError("Please implement the logistic_regression_gradient_descent function.")
+    
 
 def logistic_regression_predict(X: np.array, weights: np.array) -> np.array:
     """Predict the labels for the logistic regression model.
@@ -235,5 +237,4 @@ def logistic_regression_predict(X: np.array, weights: np.array) -> np.array:
 
     # 1. Calculate the predictions using the provided weights.
     
-
     raise NotImplementedError("Please implement the logistic_regression_predict function.")
