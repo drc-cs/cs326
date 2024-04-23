@@ -1,5 +1,5 @@
 ---
-title: COMP_SCI 396
+title: COMP_SCI 326
 separator: <!--s-->
 verticalSeparator: <!--v-->
 theme: serif
