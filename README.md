@@ -20,7 +20,7 @@ This schedule is tentative and may change as the course progresses. Click on lin
 | 6 | 04.16.2024 | [Data Preprocessing](https://drc-cs.github.io/cs326/lectures/L06_data_preprocessing/#/) | [H.02](https://canvas.northwestern.edu/courses/211880/assignments/1406471) | |
 | 7 | 04.18.2024 | [Supervised Machine Learning I <br> *KNN / Logistic Regression*](https://drc-cs.github.io/cs326/lectures/L07_supervised_machine_learning_I/#/) | | |
 | 8 | 04.23.2024 | [Supervised Machine Learning II <br>  *ROC-AUC / K-Fold / Multi-Class*](https://drc-cs.github.io/cs326/lectures/L08_supervised_machine_learning_II/#/)| | |
-| 9 | 04.25.2024 | Supervised Machine Learning III <br> *Decision Trees / Ensembles* | | |
+| 9 | 04.25.2024 | [Supervised Machine Learning III <br> *Decision Trees / Ensembles*](https://drc-cs.github.io/cs326/lectures/L09_supervised_machine_learning_III/#/) | | |
 | 10 | 04.30.2024 | Recommendation Modeling | H.03 | |
 | 11 | 05.02.2024 | Unsupervised Machine Learning | | |
 | 12 | 05.07.2024 | Project 1-on-1 | | P.02 |

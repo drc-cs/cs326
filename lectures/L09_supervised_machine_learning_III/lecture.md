@@ -12,13 +12,18 @@ revealOptions:
 # Introduction to the Data Science Pipeline
 ## L.09 | Supervised Machine Learning III
 
+<iframe src="https://lottie.host/embed/e7eb235d-f490-4ce1-877a-99114b96ff60/OFTqzm1m09.json"></iframe>
+
 </div>
 
 <!--s-->
 
 ## Announcements
 
+- H.03 is due on 04.30.2024 at 11:59 PM.
 
+- Today is office hours from 12:20P to 1P in G31.
+    - Happy to schedule additional office hours if needed!
 
 <!--s-->
 
@@ -33,14 +38,29 @@ https://join.iclicker.com/KVYY
 
 <!--s-->
 
-## L.08 | Supervised Machine Learning III
+<div class="header-slide">
 
-In today’s lecture, we will delve deeper into some fundamental concepts and algorithms underpinning supervised machine learning. 
+# L.09 | Supervised Machine Learning III
 
-Specifically, we will explore:
+</div>
 
-1. Decision Trees (Classic)
+<!--s-->
+
+## L.09 | Supervised Machine Learning III
+
+In today’s lecture, we will explore:
+
+1. Decision Trees
 2. Ensemble Models
+
+<!--s-->
+
+## Introduction Poll
+
+On a scale of 1-10, please state your level of confidence understanding / working with decision trees and ensemble models.
+
+
+<!--s-->
 
 
 <div class="header-slide">
@@ -53,7 +73,7 @@ Specifically, we will explore:
 
 ## Decision Trees | Overview
 
-**Decision Trees** are a non-parametric supervised learning method used for classification and regression tasks. They are simple to **understand** and **interpret**, making them a popular choice for exploratory data analysis.
+**Decision Trees** are a non-parametric supervised learning method used for classification and regression tasks. They are simple to **understand** and **interpret**, making them a popular choice in machine learning.
 
 A decision tree is a tree-like structure where each internal node represents a feature or attribute, each branch represents a decision rule, and each leaf node represents the outcome of the decision.
 
@@ -64,9 +84,9 @@ A decision tree is a tree-like structure where each internal node represents a f
 
 ## Decision Trees | ID3 Algorithm
 
-The construction of a decision tree involves selecting the best feature to split the dataset at each node. One of the most common algorithms for constructing decision trees is the ID3 algorithm.
+The construction of a decision tree involves selecting the best feature to split the dataset at each node. One of the simplest algorithms for constructing categorical decision trees is the ID3 algorithm.
 
-**ID3 Algorithm**:
+**ID3 Algorithm (Categorical Data)**:
 
 1. Calculate the entropy of the target variable.
 2. For each feature, calculate the information gained by splitting the data.
@@ -74,11 +94,14 @@ The construction of a decision tree involves selecting the best feature to split
 
 The ID3 algorithm recursively builds the decision tree by selecting the best feature to split the data at each node.
 
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20220831135057/CARTClassificationAndRegressionTree.jpg" height="40%" style="margin: 0 auto; display: block;">
+<p style="text-align: center; font-size: 0.6em; color: grey;">Geeksforgeeks, 2024</p>
+
 <!--s-->
 
 ## Decision Trees | Entropy
 
-**Entropy** is a measure of the impurity or disorder in a dataset. The entropy of a dataset is 0 when all instances belong to the same class and is maximized when the instances are evenly distributed across all classes. It is defined as: 
+**Entropy** is a measure of the impurity or disorder in a dataset. The entropy of a dataset is 0 when all instances belong to the same class and is maximized when the instances are evenly distributed across all classes. Entropy is defined as: 
 
 $$ H(S) = - \sum_{i=1}^{n} p_i \log_2(p_i) $$
 
@@ -125,23 +148,99 @@ ID3 Algorithm:
 6. Recursively apply the ID3 algorithm to the child datasets.
 ```
 
+Please note, ID3 works for **categorical** data. For **continuous** data, we can use the C4.5 algorithm, which is an extension of ID3 that supports continuous data.
+
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220831135057/CARTClassificationAndRegressionTree.jpg" height="50%" style="margin: 0 auto; display: block;">
 <p style="text-align: center; font-size: 0.6em; color: grey;">Geeksforgeeks, 2024</p>
+
+<!--s-->
+
+## Decision Trees | How to Split Continuous Data
+
+For the curious, here is a simple approach to split continuous data with a decision tree. ID3 won't do this out of the box, but C4.5 does have an implementation for it.
+
+1. Sort the dataset by the feature value.
+2. Calculate the information gain for each split point.
+3. Select the split point with the highest information gain as the new node.
+
+```text
+Given the following continuous feature:
+
+    [0.7, 0.3, 0.4]
+
+First you sort it: 
+
+    [0.3, 0.4, 0.7]
+
+Then you evaluate information gain for your target variable at every split:
+
+    [0.3 | 0.4 , 0.7]
+
+    [0.3, 0.4 | 0.7]
+```
+
+<!--s-->
+
+## Decision Trees | Overfitting
+
+**Overfitting** is a common issue with decision trees, where the model captures noise in the training data rather than the underlying patterns. Overfitting can lead to poor **generalization** performance on unseen data.
+
+<img src="https://gregorygundersen.com/image/linoverfit/spline.png" height="50%" style="margin: 0 auto; display: block;">
+<p style="text-align: center; font-size: 0.6em; color: grey;">Gunderson 2020</p>
 
 
 <!--s-->
 
 ## Decision Trees | Overfitting
 
-**Overfitting** is a common issue with decision trees, where the model captures noise in the training data rather than the underlying patterns. Overfitting can lead to poor generalization performance on unseen data.
+**Overfitting** is a common issue with decision trees, where the model captures noise in the training data rather than the underlying patterns. Overfitting can lead to poor **generalization** performance on unseen data.
 
-**Strategies to Prevent Overfitting**:
+**Strategies to Prevent Overfitting in Decision Trees**:
 
 1. **Pruning**: Remove branches that do not improve the model's performance on the validation data.
     - This is similar to L1 regularization in linear models!
 2. **Minimum Samples per Leaf**: Set a minimum number of samples required to split a node.
 3. **Maximum Depth**: Limit the depth of the decision tree.
 4. **Maximum Features**: Limit the number of features considered for splitting.
+
+<!--s-->
+
+
+## Decision Trees | Pruning
+
+**Pruning** is a technique used to reduce the size of a decision tree by removing branches that do not improve the model's performance on the validation data. Pruning helps prevent overfitting and improves the generalization performance of the model.
+
+Practically, this is often done by growing the tree to its maximum size and then remove branches that do not improve the model's performance on the validation data. A loss function is used to evaluate the performance of the model on the validation data, and branches that do not improve the loss are pruned: 
+
+$$ L(T) = \sum_{t=1}^{T} L(y_t, \hat{y}_t) + \alpha |T| $$
+
+Where:
+
+- $L(T)$ is the loss function of the decision tree $T$.
+- $L(y_t, \hat{y}_t)$ is the loss function of the prediction $y_t$.
+- $\alpha$ is the regularization parameter.
+- $|T|$ is the number of nodes in the decision tree.
+
+
+<!--s-->
+
+## Decision Tree Algorithm Comparisons
+
+| Algorithm | Data Types | Splitting Criteria |
+|-----------|------------|--------------------|
+| ID3       | Categorical | Entropy & Information Gain    |
+| C4.5      | Categorical & Continuous | Entropy & Information Gain |
+| CART      | Categorical & Continuous | Gini Impurity |
+
+
+<!--s-->
+
+## Question | Decision Tree 
+
+Which of the following decision tree algorithms is a reasonable choice for continuous data?
+
+A. ID3 <br>
+B. C4.5
 
 
 <!--s-->
@@ -205,7 +304,7 @@ Random Forests are widely used in practice due to their robustness, scalability,
 
 ## Ensemble Models | Boosting | Example: AdaBoost
 
-**AdaBoost (Adaptive Boosting)** is a popular boosting algorithm that combines multiple weak learners to create a strong learner. AdaBoost works by assigning weights to each instance in the training data and adjusting the weights based on the performance of the model.
+**AdaBoost (Adaptive Boosting)** is a popular boosting algorithm. AdaBoost works by assigning weights to each instance in the training data and adjusting the weights based on the performance of the model.
 
 **Key Features of AdaBoost**:
 
@@ -221,7 +320,7 @@ Random Forests are widely used in practice due to their robustness, scalability,
 
 ## Ensemble Models | Boosting | Example: Gradient Boosting
 
-**Gradient Boosting** is another popular boosting algorithm that combines multiple weak learners to create a strong learner. Gradient Boosting works by fitting a sequence of weak learners to the residuals of the previous model. This differs from AdaBoost, which focuses on the misclassified instances.
+**Gradient Boosting** is another popular boosting algorithm. Gradient Boosting works by fitting a sequence of weak learners to the residuals of the previous model. This differs from AdaBoost, which focuses on the misclassified instances.
 
 **Key Features of Gradient Boosting**:
 
@@ -259,5 +358,50 @@ Random Forests are widely used in practice due to their robustness, scalability,
 
 Stacking is often trained end-to-end, where the base models and meta-learner are trained simultaneously to optimize the overall performance.
 
-<img src="https://miro.medium.com/v2/resize:fit:946/1*T-JHq4AK3dyRNi7gpn9-Xw.png" height="50%" style="margin: 0 auto; display: block;">
+<img src="https://miro.medium.com/v2/resize:fit:946/1*T-JHq4AK3dyRNi7gpn9-Xw.png" height="30%" style="margin: 0 auto; display: block;">
 <p style="text-align: center; font-size: 0.6em; color: grey;">Setunga, 2020</p
+
+<!--s-->
+
+## Question | Ensemble Models
+
+Let's say that you train a sequence of models that learn from the mistakes of the predecessors. Instead of focusing on the misclassified instances (and weighting them more highly), you focus on improving the residuals. What algorithm is this most similar to?
+
+A. Bagging (e.g. Random Forest) <br>
+B. Boosting (e.g. Adaboost) <br>
+C. Boosting (e.g. Gradient Boosting) <br>
+D. Stacking
+
+<!--s-->
+
+## Summary
+
+In this lecture, we explored two fundamental concepts in supervised machine learning:
+
+1. **Decision Trees**:
+    - A non-parametric supervised learning method used for classification and regression tasks.
+    - Can be constructed using the ID3 algorithm based on entropy and information gain.
+    - Prone to overfitting, which can be mitigated using pruning and other strategies.
+
+2. **Ensemble Models**:
+    - Combine multiple individual models to improve predictive performance.
+    - Include bagging, boosting, and stacking as popular ensemble methods.
+    - Reduce overfitting and improve generalization by combining multiple models.
+
+<!--s-->
+
+## Exit Poll
+
+On a scale of 1-10, please state your level of confidence understanding / working with decision trees and ensemble models.
+
+<!--s-->
+
+<div class="header-slide">
+
+# H.03 | machine_learning.py
+
+Due: 04.30.2024
+
+<iframe src="https://lottie.host/embed/6c677caa-d54a-411c-b0c0-6f186378d571/UKVVhf0EJN.json" height = 200></iframe>
+
+</div>
