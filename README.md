@@ -21,7 +21,7 @@ This schedule is tentative and may change as the course progresses. Click on lin
 | 7 | 04.18.2024 | [Supervised Machine Learning I <br> *KNN / Logistic Regression*](https://drc-cs.github.io/cs326/lectures/L07_supervised_machine_learning_I/#/) | | |
 | 8 | 04.23.2024 | [Supervised Machine Learning II <br>  *ROC-AUC / K-Fold / Multi-Class*](https://drc-cs.github.io/cs326/lectures/L08_supervised_machine_learning_II/#/)| | |
 | 9 | 04.25.2024 | [Supervised Machine Learning III <br> *Decision Trees / Ensembles*](https://drc-cs.github.io/cs326/lectures/L09_supervised_machine_learning_III/#/) | | |
-| 10 | 04.30.2024 | Recommendation Modeling | H.03 | |
+| 10 | 04.30.2024 | [Recommendation Modeling](https://drc-cs.github.io/cs326/lectures/L10_recommendation_modeling/#/) | H.03 | |
 | 11 | 05.02.2024 | Unsupervised Machine Learning | | |
 | 12 | 05.07.2024 | Project 1-on-1 | | P.02 |
 | 13 | 05.09.2024 | Time Series Analysis | H.04 | |
@@ -107,7 +107,7 @@ You will complete a team project over the course of the semester. The project co
 | P.04 | 05.30.2024 | 2 page, final technical report. |
 
 
-Collective ambition and equal contribution is rewarded!
+Collective ambition and equal contribution is rewarded.
 
 ------
 
