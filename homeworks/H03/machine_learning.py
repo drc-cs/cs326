@@ -87,7 +87,7 @@ def cosine_distance(x1: np.array, x2: np.array) -> float:
     raise NotImplementedError("Please implement the cosine_distance function.")
     
 def knn(x: np.array, y: np.array, 
-        sample: np.array, distance_method: Callable, k: int) -> np.array:
+        sample: np.array, distance_method: Callable, k: int) -> int:
     """Perform k-nearest neighbors classification.
 
     Args:
@@ -99,7 +99,7 @@ def knn(x: np.array, y: np.array,
         k (int): The number of neighbors to consider as equal votes.
     
     Returns:
-        np.array: The predicted labels for the testing data.
+        int: The label of the sample.
     """
 
     # (distance, label) between the test sample and all the training samples.
