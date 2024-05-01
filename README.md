@@ -21,13 +21,13 @@ This schedule is tentative and may change as the course progresses. Click on lin
 | 7 | 04.18.2024 | [Supervised Machine Learning I <br> *KNN / Logistic Regression*](https://drc-cs.github.io/cs326/lectures/L07_supervised_machine_learning_I/#/) | | |
 | 8 | 04.23.2024 | [Supervised Machine Learning II <br>  *ROC-AUC / K-Fold / Multi-Class*](https://drc-cs.github.io/cs326/lectures/L08_supervised_machine_learning_II/#/)| | |
 | 9 | 04.25.2024 | [Supervised Machine Learning III <br> *Decision Trees / Ensembles*](https://drc-cs.github.io/cs326/lectures/L09_supervised_machine_learning_III/#/) | | |
-| 10 | 04.30.2024 | [Recommendation Modeling](https://drc-cs.github.io/cs326/lectures/L10_recommendation_modeling/#/) | H.03 | |
+| 10 | 04.30.2024 | [Recommendation Modeling](https://drc-cs.github.io/cs326/lectures/L10_recommendation_modeling/#/) | [H.03](https://github.com/drc-cs/cs326/tree/main/homeworks/H03) | |
 | 11 | 05.02.2024 | Unsupervised Machine Learning | | |
 | 12 | 05.07.2024 | Project 1-on-1 | | P.02 |
-| 13 | 05.09.2024 | Time Series Analysis | H.04 | |
+| 13 | 05.09.2024 | Time Series Analysis | | |
 | 14 | 05.14.2024 | Natural Language Processing | | |
 | 15 | 05.16.2024 | Storytelling and Ethics | | |
-| 16 | 05.21.2024 | Quiz Review | H.05 | |
+| 16 | 05.21.2024 | Quiz Review | H.04 | |
 | 17 | 05.23.2024 | Quiz | | |
 | 18 | 05.28.2024 | Project Presentation | | P.03 |
 | 19 | 05.30.2024 | Project Presentation | | P.03 - P.04 |
