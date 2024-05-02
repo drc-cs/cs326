@@ -90,8 +90,7 @@ Homeworks are designed to reinforce the concepts covered in lecture.
 | H.01 | 04.04.2024 | Hello, World! |
 | H.02 | 04.16.2024 | Exploratory Analysis & Statistical Inference |
 | H.03 | 04.30.2024 | Supervised Machine Learning |
-| H.04 | 05.14.2024 | Unsupervised Machine Learning |
-| H.05 | 05.28.2024 | Natural Language Processing |
+| H.04 | 05.21.2024 | Unsupervised Machine Learning & Time Series |
 
 ------
 
