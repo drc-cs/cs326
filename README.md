@@ -26,8 +26,8 @@ This schedule is tentative and may change as the course progresses. Click on lin
 | 12 | 05.07.2024 | Project 1-on-1 | | [P.02](https://drc-cs.github.io/cs326/lectures/L10_recommendation_modeling/#/26) |
 | 13 | 05.09.2024 | [Time Series Analysis](https://drc-cs.github.io/cs326/lectures/L13_time_series/#/) | | |
 | 14 | 05.14.2024 | Natural Language Processing | | |
-| 15 | 05.16.2024 | Storytelling and Ethics | | |
-| 16 | 05.21.2024 | Quiz Review | [H.04](https://github.com/drc-cs/cs326/tree/main/homeworks/H04) | |
+| 15 | 05.16.2024 | Quiz Review | | |
+| 16 | 05.21.2024 | Storytelling and Ethics | [H.04](https://github.com/drc-cs/cs326/tree/main/homeworks/H04) | |
 | 17 | 05.23.2024 | Quiz | | |
 | 18 | 05.28.2024 | Project Presentation | | P.03 |
 | 19 | 05.30.2024 | Project Presentation | | P.03 - P.04 |
@@ -112,7 +112,7 @@ Collective ambition and equal contribution is rewarded.
 
 ## Quiz
 
-There will be one quiz at the end of this course. The quiz will cover the theoretical and practical concepts covered in the course through a mini-project challenge that you will have 75 minutes to complete. The challenge will be styled in a format similar to an industry data science coding interview. If you follow along with the lectures and homeworks, you will be well-prepared for the quiz.
+There will be one quiz at the end of this course. The quiz will cover the theoretical and practical concepts covered in the lectures and homeworks. If you follow along with the lectures and homeworks, you will be well-prepared for the quiz.
 
 ------
 
