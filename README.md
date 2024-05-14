@@ -25,7 +25,7 @@ This schedule is tentative and may change as the course progresses. Click on lin
 | 11 | 05.02.2024 | [Unsupervised Machine Learning](https://drc-cs.github.io/cs326/lectures/L11_unsupervised_machine_learning/#/) | | |
 | 12 | 05.07.2024 | Project 1-on-1 | | [P.02](https://drc-cs.github.io/cs326/lectures/L10_recommendation_modeling/#/26) |
 | 13 | 05.09.2024 | [Time Series Analysis](https://drc-cs.github.io/cs326/lectures/L13_time_series/#/) | | |
-| 14 | 05.14.2024 | Natural Language Processing | | |
+| 14 | 05.14.2024 | [Natural Language Processing](https://drc-cs.github.io/cs326/lectures/L14_natural_language_processing/#/) | | |
 | 15 | 05.16.2024 | Quiz Review | | |
 | 16 | 05.21.2024 | Storytelling and Ethics | [H.04](https://github.com/drc-cs/cs326/tree/main/homeworks/H04) | |
 | 17 | 05.23.2024 | Quiz | | |
